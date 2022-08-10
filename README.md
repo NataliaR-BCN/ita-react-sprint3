@@ -1,1 +1,1 @@
-# ita-react-sprint3
+Lliurament Sprint 3 - curs React online IT Academy - 08/2022
