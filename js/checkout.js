@@ -106,7 +106,7 @@ function promoLastCall(id, unitsToPromo) {
     totalItemsCart += unitsToPromo - 1;
 
     goToNextPage();
-    recoverCart() ;
+    recoverCart();
 }
 
 

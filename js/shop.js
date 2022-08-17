@@ -3,10 +3,10 @@
 let counter = 0; 
 
 // Array with products (objects) added directly with push(). Products in this array are repeated.
-let cartList = [];
+const cartList = [];
 
 // Improved version of cartList. Cart is an array of products (objects), but each one has a quantity field to define its quantity, so these products are not repeated.
-let cart = [];
+const cart = [];
 
 let total = 0;
 
@@ -95,10 +95,17 @@ function buy(id) {
 // Exercise 2
 function cleanCart() {
 
-    cartList = [];
+    cartList.length = 0;
+   
+    //cartList = []; not available when using const.  
 
     //From exercise 8 on - activated by button in My Cart:
-    cart = [];
+    
+    //cart = [];
+
+    cart.length = 0;
+
+    sessionStorage.clear();
 
     checkCartContent();
    
@@ -339,7 +346,16 @@ function recoverCart() {
 
     let newCart = sessionStorage.getItem('arrayCart');
 
-    cart = JSON.parse(newCart);
+    const temporaryCart = JSON.parse(newCart);
+
+    let tCartLength = temporaryCart.length;
+    
+    cart.length = 0;
+
+    for (let i = 0; i < tCartLength ; i++) {
+        let value = temporaryCart[i];
+        cart.push(value);
+    }
 
     totalItemsCart  = sessionStorage.getItem('numberItemsCart');
 

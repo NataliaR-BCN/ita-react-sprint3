@@ -340,6 +340,7 @@ button:not(:disabled),
   .display-3 {
     font-size: calc(1.5rem + 1.8vw);
   }
+
 }
 
 @media (min-width: 1200px) {
@@ -441,11 +442,6 @@ button:not(:disabled),
   width: 20%;
 }
 
-.row-cols-md-5 > * {
-    flex: 0 0 auto;
-    width: 20%;
-}
-
 .col-12 {
   flex: 0 0 auto;
   width: 100%;
@@ -477,7 +473,18 @@ button:not(:disabled),
     flex: 0 0 auto;
     width: 50%;
   }
+
+  .row-cols-sm-2 > * {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+
+  .row-cols-sm-3 > * {
+    flex: 0 0 auto;
+    width: 33.3333333333%;
+  }
 }
+
 @media (min-width: 768px) {
 
   .row-cols-md-2 > * {
@@ -490,6 +497,7 @@ button:not(:disabled),
     width: 33.3333333333%;
   }
 }
+
 @media (min-width: 992px) {
 
   .col-lg-6 {
@@ -1569,7 +1577,7 @@ button:not(:disabled),
 .carousel-caption {
   position: absolute;
   right: 15%;
-  bottom: 1.25rem;
+  bottom: 0.2rem;
   left: 15%;
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
@@ -1747,9 +1755,19 @@ button:not(:disabled),
   margin: 3rem !important;
 }
 
+.mx-0 {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
 .my-3 {
   margin-top: 1rem !important;
   margin-bottom: 1rem !important;
+}
+
+.my-5 {
+  margin-top: 3rem !important;
+  margin-bottom: 3rem !important;
 }
 
 .mt-3 {
@@ -1829,6 +1847,11 @@ button:not(:disabled),
   padding-bottom: 1rem !important;
 }
 
+.py-5 {
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
+}
+
 .pt-0 {
   padding-top: 0 !important;
 }
@@ -1850,7 +1873,7 @@ button:not(:disabled),
 }
 
 .fs-2 {
-  font-size: calc(1rem + 0.8vw) !important;
+  font-size: calc(1.3rem + 0.8vw) !important;
 }
 
 .fs-3 {
@@ -1928,6 +1951,14 @@ button:not(:disabled),
 .rounded-pill {
   border-radius: 50rem !important;
 }
+
+@media (min-width: 576px) {
+
+ .d-sm-block {
+    display: block !important;
+  }
+}
+
 @media (min-width: 768px) {
 
   .d-md-block {
@@ -1938,11 +1969,21 @@ button:not(:disabled),
     padding: 3rem !important;
   }
 
+  .px-md-5 {
+    padding-right: 3rem !important;
+    padding-left: 3rem !important;
+  }
+
   .m-md-5 {
     margin: 3rem !important;
   }
-
+  
+  mx-md-5 {
+    margin-left: 3rem !important;
+    margin-right: 3rem !important;
+  }
 }
+
 @media (min-width: 992px) {
 
   .order-lg-last {
